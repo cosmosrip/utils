@@ -1,9 +1,10 @@
 plugins {
 	kotlin("jvm") version "2.0.20"
 	`java-library`
+	`maven-publish`
 }
 
-group = "rip.cosmos"
+group = "com.github.cosmosrip"
 version = "1.0-SNAPSHOT"
 
 repositories {
