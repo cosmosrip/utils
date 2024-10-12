@@ -21,3 +21,15 @@ kotlin {
 
 java.withSourcesJar()
 java.withJavadocJar()
+
+publishing {
+	publications {
+		create<MavenPublication>("mavenJava") {
+			groupId = project.group as String
+			artifactId = "utils"
+			version = "1.0.0"
+
+			from(components["java"])
+		}
+	}
+}

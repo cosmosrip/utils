@@ -6,3 +6,4 @@ before_install:
 install:
   - gradle clean build publishToMavenLocal
   - cp -r ./* /tmp
+  - cd /tmp && gradle clean build publishToMavenLocal
