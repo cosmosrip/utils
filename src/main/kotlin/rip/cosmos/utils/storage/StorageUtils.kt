@@ -66,7 +66,7 @@ private fun visitFile(storage: FileStorage, root: Path, file: Path) {
 			visitFile(storage, root, f)
 		}
 	} else if (file.isRegularFile()) {
-		storage.putFile(file.relativeTo(root).pathString, file.readBytes())
+		storage.putFile(file.relativeTo(root).pathString.replace("\\", "/"), file.readBytes())
 	} else {
 		throw IllegalArgumentException("$file is not a file or directory")
 	}
